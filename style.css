@@ -25,13 +25,25 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover; /* prevents stretching */
+  object-fit: cover;      /* keeps proportions */
+  object-position: center;
 }
 
-/* Logo in center */
+/* Profile pic in about section (larger circle) */
+.about-pfp {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
+}
+
+/* Logo in the middle of navbar */
 .nav-logo {
-  width: 120px;   /* fixed width */
-  height: auto;   /* keeps aspect ratio */
+  width: 120px;   /* force logo size */
+  height: auto;   /* keep proportions */
+  object-fit: contain; /* don’t crop, just fit inside */
 }
 
 /* Hamburger menu icon */
