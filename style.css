@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #00bfff; /* blue accent */
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.nav-pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  margin: 5px;
+  background: #ff0000; /* red accent */
+  transition: 0.4s;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+}
+.sidebar ul {
+  list-style: none;
+  text-align: center;
+}
+.sidebar ul li {
+  margin: 20px 0;
+}
+.sidebar ul li a {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.about-pfp {
+  width: 200px;
+  border-radius: 50%;
+}
+.about-text {
+  max-width: 500px;
+  background: rgba(255,0,0,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Projects */
+.projects .project-card {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(0,0,255,0.1);
+  border-radius: 10px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.contact button {
+  background: #00bfff;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Socials */
+.social-links a {
+  margin: 0 10px;
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 10px;
+  text-align: center;
+  color: gray;
+}
