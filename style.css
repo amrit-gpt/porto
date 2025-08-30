@@ -12,32 +12,34 @@ body {
   line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  position: relative;
-  z-index: 100;
-}
-
-/* Profile pic in navbar (small circle) */
+/* NAVBAR PROFILE PICTURE (tiny circle top-left) */
 .nav-pfp {
-  width: 60px;          /* fixed size */
-  height: 60px;
+  width: 40px !important;    /* force smaller size */
+  height: 40px !important;
   border-radius: 50%;
-  object-fit: cover;     /* crops inside circle */
+  object-fit: cover;
   object-position: center;
 }
 
-/* Logo in center of navbar */
+/* NAVBAR LOGO (center, compact size) */
 .nav-logo {
-  width: 120px;          /* fixed width */
-  max-height: 60px;      /* cap the height */
-  object-fit: contain;   /* keeps aspect ratio */
+  width: 80px !important;     /* much smaller */
+  max-height: 40px !important;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
+}
+
+/* ABOUT SECTION PROFILE PICTURE (medium size) */
+.about-pfp {
+  width: 120px !important;    /* reduced significantly */
+  height: 120px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.5);
 }
 
 /* Hamburger menu icon (top-right) */
