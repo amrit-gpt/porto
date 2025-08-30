@@ -1,4 +1,4 @@
-/* General Reset */
+/* ================= GENERAL RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,16 +20,21 @@ body {
   padding: 10px 30px;
 }
 
+/* Profile pic in navbar (small circle) */
 .nav-pfp {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  object-fit: cover; /* prevents stretching */
 }
 
+/* Logo in center */
 .nav-logo {
-  height: 40px;
+  width: 120px;   /* fixed width */
+  height: auto;   /* keeps aspect ratio */
 }
 
+/* Hamburger menu icon */
 .hamburger {
   width: 30px;
   cursor: pointer;
@@ -42,16 +47,17 @@ body {
   transition: 0.4s;
 }
 
-/* Sidebar */
+/* ================= SIDEBAR ================= */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -250px;
+  right: -250px; /* hidden by default */
   width: 250px;
   height: 100%;
   background: #111;
   transition: right 0.3s ease;
   padding-top: 60px;
+  z-index: 1000;
 }
 .sidebar ul {
   list-style: none;
@@ -64,38 +70,49 @@ body {
   color: #00bfff;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
 }
 
-/* Sections */
+/* ================= SECTIONS ================= */
 .section {
   padding: 80px 20px;
   text-align: center;
 }
+
+/* About section layout */
 .about {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
+
+/* Profile pic in about section (bigger circle) */
 .about-pfp {
-  width: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
+  object-fit: cover;
 }
+
+/* About text box */
 .about-text {
   max-width: 500px;
-  background: rgba(255,0,0,0.1);
+  background: rgba(255,0,0,0.1); /* faint red background */
   padding: 20px;
   border-radius: 10px;
 }
 
-/* Projects */
+/* ================= PROJECTS ================= */
 .projects .project-card {
   margin: 20px auto;
   max-width: 400px;
   padding: 20px;
-  background: rgba(0,0,255,0.1);
+  background: rgba(0,0,255,0.1); /* faint blue */
   border-radius: 10px;
 }
+
 .btn {
   display: inline-block;
   margin-top: 10px;
@@ -104,16 +121,21 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #cc0000; /* darker red on hover */
 }
 
-/* Contact */
+/* ================= CONTACT ================= */
 .contact form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: auto;
 }
-.contact input, .contact textarea {
+.contact input, 
+.contact textarea {
   margin: 10px 0;
   padding: 10px;
   border: none;
@@ -126,20 +148,31 @@ body {
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.contact button:hover {
+  background: #008ccc; /* darker blue */
 }
 
-/* Socials */
+/* ================= SOCIALS ================= */
 .social-links a {
   margin: 0 10px;
   color: #ff0000;
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: #ff6600; /* orange hover */
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
   background: #111;
   padding: 10px;
   text-align: center;
   color: gray;
+  font-size: 14px;
 }
