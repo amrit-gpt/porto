@@ -20,30 +20,33 @@ body {
   padding: 10px 30px;
 }
 
-/* Profile pic in navbar (small circle) */
+/* NAVBAR PROFILE PIC (small circle) */
 .nav-pfp {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;      /* keeps proportions */
-  object-position: center;
-}
-
-/* Profile pic in about section (larger circle) */
-.about-pfp {
-  width: 180px;
-  height: 180px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
 }
 
-/* Logo in the middle of navbar */
+/* NAVBAR LOGO (centered logo, fixed size) */
 .nav-logo {
-  width: 120px;   /* force logo size */
+  width: 100px;   /* fixed width */
   height: auto;   /* keep proportions */
-  object-fit: contain; /* don’t crop, just fit inside */
+  max-height: 50px;  /* don’t grow too tall */
+  object-fit: contain;
+}
+
+/* ABOUT SECTION PHOTO (larger circle, neat) */
+.about-pfp {
+  width: 180px;       /* fixed width */
+  height: 180px;      /* fixed height */
+  border-radius: 50%;
+  object-fit: cover;  /* crop inside circle */
+  object-position: center;
+  display: block;
+  margin: 0 auto;     /* center horizontally */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
 }
 
 /* Hamburger menu icon */
