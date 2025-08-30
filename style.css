@@ -12,28 +12,95 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR PROFILE PICTURE (tiny circle top-left) */
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000; /* black background */
+  position: relative;
+  z-index: 100;
+}
+
+/* Profile pic in navbar (tiny circle left) */
 .nav-pfp {
-  width: 40px !important;    /* force smaller size */
-  height: 40px !important;
+  width: 35px !important;       /* tiny */
+  height: 35px !important;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
-/* NAVBAR LOGO (center, compact size) */
+/* Logo in center (scaled small) */
 .nav-logo {
-  width: 80px !important;     /* much smaller */
+  width: 90px !important;       /* fixed small width */
+  height: auto !important;
   max-height: 40px !important;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  flex-shrink: 0;
 }
 
-/* ABOUT SECTION PROFILE PICTURE (medium size) */
+/* Hamburger menu icon (top-right) */
+.hamburger {
+  width: 25px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  margin: 4px;
+  background: #ff0000; /* red accent */
+  transition: 0.4s;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* hidden by default */
+  width: 250px;
+  height: 100%;
+  background: #111;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+.sidebar ul {
+  list-style: none;
+  text-align: center;
+}
+.sidebar ul li {
+  margin: 20px 0;
+}
+.sidebar ul li a {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* About section layout */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Profile pic in about section (medium circle) */
 .about-pfp {
-  width: 120px !important;    /* reduced significantly */
-  height: 120px !important;
+  width: 100px !important;      /* forced small */
+  height: 100px !important;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -42,14 +109,80 @@ body {
   box-shadow: 0px 3px 8px rgba(0,0,0,0.5);
 }
 
-/* Hamburger menu icon (top-right) */
-.hamburger {
-  width: 30px;
-  cursor: pointer;
+/* About text box */
+.about-text {
+  max-width: 450px;
+  background: rgba(255,0,0,0.1);
+  padding: 20px;
+  border-radius: 10px;
 }
-.hamburger span {
-  display: block;
-  height: 3px;
-  margin: 5px;
-  background: #ff0000; /* red accent */
- 
+
+/* ================= PROJECTS ================= */
+.projects .project-card {
+  margin: 20px auto;
+  max-width: 350px;
+  padding: 20px;
+  background: rgba(0,0,255,0.1);
+  border-radius: 10px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #cc0000;
+}
+
+/* ================= CONTACT ================= */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: auto;
+}
+.contact input, .contact textarea {
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.contact button {
+  background: #00bfff;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.contact button:hover {
+  background: #008ccc;
+}
+
+/* ================= SOCIALS ================= */
+.social-links a {
+  margin: 0 8px;
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: #ff6600;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #111;
+  padding: 10px;
+  text-align: center;
+  color: gray;
+  font-size: 13px;
+}
